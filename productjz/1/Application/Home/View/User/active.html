@@ -1,0 +1,36 @@
+<include file = "layout:header"/>
+<include file = "layout:navbar"/>
+<div class="content forget">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="col-sm-3">
+              <h1>激活账户</h1>
+            </div>
+          </div>
+          <div class="panel-body">
+            <form action="__APP__/Home/User/doActive" method="post">
+              <div class="form-group">
+                <p>{$info['account']}</p>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="输入新密码" required/>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="passwordTwice" placeholder="确认新密码" required/>
+              </div>
+              <div class="form-group">
+                <input type="hidden"  name="id" value="{$info['id']}" />
+                <input type="submit" value="激活" class="btn btn-block btn-primary"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<include file = "layout:footer"/>

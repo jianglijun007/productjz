@@ -1,0 +1,45 @@
+<include file = "Common:header"/>
+
+
+    <div id="wrapper">
+
+        <include file = "Common:navbar"/>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header alert-warning">封禁账号</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <form action='__APP__/Admin/User/doBan' enctype="multipart/form-data" method='post'>
+
+                <div class="form-group clearfix">
+                  <div class="alert alert-danger">
+                    请注意！你正在封禁 {$data['name']} 的账号 {$data['username']} ，如果确认操作无误，请在下方输入封禁原因，否则请不要执行任何操作。
+                  </div>
+                  <div class="col-sm-6">
+                    <input class='form-control' id='reason' placeholder='封号原因' type='text' name='reason'/>
+                  </div>
+                </div>
+                
+
+              
+                <div class="col-sm-6">
+                <input type="hidden" name="id" value="{$data[id]}">
+                <input type="hidden" name="state" value="-1">
+                    <button class='btn btn-danger'>提交</button>
+                </div>
+
+
+            </form>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+
+    </div>
+    <!-- /#wrapper -->
+
+<include file = "Common:footer"/>

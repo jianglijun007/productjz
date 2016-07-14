@@ -1,0 +1,629 @@
+*{
+  font-family: "微软雅黑";
+}
+h1{
+  font-weight: 100;
+}
+.panel h1{
+  margin-top: 10px;
+}
+.well{
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+}
+.panel-group .panel,.panel{
+  border-radius: 0;
+  box-shadow: none;
+}
+.menuProfile{
+  background-color: #fff;
+}
+a.thumbnail{
+  border-radius: 0;
+}
+a.thumbnail:hover{
+  border-color: #b5b5b5;
+}
+.btn{
+  border-radius: 0;
+}
+.content{
+  min-height: 550px;
+  background-color: #f2f2f2;
+}
+.borderBottom{
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.borderNo{
+  padding: 10px 0;
+}
+.borderRight{
+  border-right: 1px solid #ddd;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  vertical-align: middle;
+}
+.form-control{
+  border-radius: 0;
+  box-shadow: none;
+}
+  /*导航条(navbar)开始*/
+.navbar{
+  height: 60px;
+  margin-bottom: 0;
+  background-color: #148CCA;
+}
+#logo img{
+  display: inline-block;
+  height: 30px;
+  margin-top: 15px;
+}
+.header .nav li:first-child{
+  margin-right: 40px;
+  padding: 0;
+  border-radius: 4px;
+  background-color: rgba(255,255,255,.1);
+}
+.header .nav li a{
+  height: 60px;
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #e8f5f1;
+  background-color: transparent;
+  font-weight: 100;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.header .nav li a:hover,.header .nav li a:focus{
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  outline: none;
+}
+.nav .open>a:focus,.nav .open>a:hover{
+  background-color: rgba(255,255,255,.2);
+}
+.header .nav .dropdown-menu {
+  padding: 0;
+  border-radius: 0;
+}
+.header .nav .dropdown-menu li{
+  border-radius: 0;
+}
+.header .nav .dropdown-menu li:first-child{
+  margin-right: 0;
+}
+.header .nav .dropdown-menu a{
+  border-radius: 0;
+  height: 40px;
+  padding: 10px 30px;
+  line-height: 20px;
+  color: #585757;
+}
+.header .nav .dropdown-menu a:hover{
+  background-color: #ebebeb;;
+  color: #585757;
+}
+/*导航条(navbar)结束*/
+
+/*banner开始*/
+.carousel-caption{
+  bottom: 120px;
+  text-align: left;
+}
+.banner .item img{
+  min-width: 100%;
+  height: 500px;
+}
+.banner .title img{
+  min-width: 467px;
+  height: 86px;
+}
+.banner h2{
+  margin: 30px 0;
+  font-weight: 600;
+  font-size: 50px;
+  padding-left: 20px;
+  letter-spacing: 27px;
+}
+.banner .en{
+  letter-spacing: 3px;
+}
+.banner p{
+  font-size: 18px;
+  padding-left: 20px;
+  letter-spacing: 10px;
+}
+.banner .en{
+  letter-spacing: 1px;
+}
+.banner .action a{
+  margin-top: 170px;
+  margin-left: 50px;
+  padding: 13px 45px;
+  background-color: transparent;
+  line-height: 40px;
+  border-radius: 0;
+  border: 3px solid #d3e3ee;
+  color: #d3e3ee;
+  font-size: 20px;
+  letter-spacing: 5px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.banner .action .en{
+  letter-spacing: 0px;
+}
+.banner .action a:hover{
+  background-color: #fff;
+  border-color: #fff;
+  color: #0e346d;
+}
+/*banner结束*/
+
+/*intro开始*/
+.intro{
+  margin-top: 40px;
+  color: #333;
+}
+.introText{
+  margin-top: 80px;
+}
+.intro .intro1,.intro .intro2,.intro .intro3{
+  background-color: #fff;
+  margin-bottom: 40px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+}
+.intro .intro2 img{
+  float: right;
+}
+.intro h3{
+  margin-top: 50px;
+  color: #333;
+  font-size: 50px;
+  font-weight: 100;
+  text-align: center;
+}
+.intro p{
+  display: block;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 100;
+  color: rgb(153,153,153);
+}
+.intro .intro3 p{
+  text-align: center;
+}
+/*intro结束*/
+
+/*footer开始*/
+.footer{
+  background-color: #111;
+  height: 80px;
+  border-top: 1px solid #303030;
+}
+.footerLink {
+  text-align: right;
+}
+.footerLink a{
+  line-height: 80px;
+  margin-right: 50px;
+  color: #555;
+}
+/*footer结束*/
+
+/*登录模态框开始*/
+.modal-dialog{
+  margin-top: 100px;
+}
+.modal-content{
+  border-radius: 0;
+}
+.modal-header{
+  background-color: #148CCA;
+  color: #fff;
+}
+.modal-header h4{
+  padding-left: 50px;
+}
+.modal-header .close,.modal-header .close:focus,.modal-header .close:hover{
+  color: #fff;
+}
+.modal-body{
+  padding: 30px 50px;
+}
+.modal-body .form-group{
+  margin-bottom: 20px;
+}
+.modal-body .form-group input,.modal-content .form-group input:focus{
+  height: 40px;
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.modal-body .form-group input:focus{
+  border: 1px solid #148CCA;
+}
+.modal-body .btnLogin{
+  clear: both;
+  margin-top: 50px;
+}
+.modal-body .btnLogin input{
+  border-radius: 0;
+  border: none;
+  background-color: #148CCA;
+  font-size: 16px;
+  height: 38px;
+}
+.modal-body .btnLogin input:hover{
+  background-color: #fff;
+  color: #148CCA;
+  border: 1px solid #148cca;
+}
+.modal-body .indexText{
+  padding-left: 25px;
+  border-left: 1px solid #999;
+}
+.modal-body .indexText h5{
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+/*登录模态框结束*/
+
+/*找回密码开始*/
+.forget .panel{
+  margin-top: 100px;
+  border-radius: 0;
+}
+.forget .panel-heading{
+  height: 80px;
+  border-radius: 0;
+  background-color: #fff;
+  color: #1ab7ea;
+}
+.forget h1{
+  font-size: 20px;
+  color: #666;
+}
+.forget .step{
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  display: block;
+  font-size: 25px;
+  border: 1px solid #1ab7ea;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 60px;
+}
+.forget .active{
+  background-color: #148CCA;
+  color: #fff;
+}
+.forget .form-group{
+  margin-bottom: 30px;
+}
+.forget input{
+  height: 40px;
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.forget input:focus {
+  border: 1px solid #148CCA;
+}
+.forget .panel-body{
+  padding:50px 50px 20px;
+}
+.forget h4{
+  font-size: 25px;
+}
+.forget p{
+  color: #999999;
+}
+/*找回密码结束*/
+
+/*注册第一步邮箱填写开始*/
+.registerEmail .panel{
+  margin-top: 70px;
+}
+.registerEmail .panel-heading{
+  padding-left: 50px;
+  background-color: #fff;
+}
+.registerEmail .panel-body{
+  padding: 30px 50px;
+}
+.registerEmail label{
+  font-weight: 100;
+}
+.registerEmail input{
+  height: 40px;
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.registerEmail input:focus {
+  border: 1px solid #148CCA;
+}
+.registerEmail .checkbox input[type=checkbox]{
+  margin: 0;
+  height: 20px;
+}
+/*注册第一步邮箱填写结束*/
+/*emailCheck开始*/
+.registerEmailCheck .panel{
+  margin-top: 70px;
+}
+.registerEmailCheck .panel-heading{
+  padding-left: 50px;
+  background-color: #fff;
+}
+.registerEmailCheck .panel-body{
+  padding: 30px 50px;
+}
+.registerEmailCheck a{
+  height: 40px;
+  line-height: 25px;
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.registerEmailCheck a:focus {
+  border: 1px solid #148CCA;
+}
+.registerEmailCheck .verifyEmail{
+  padding-right: 30px;
+  border-right: 1px solid rgb(221,221,221);
+}
+.registerEmailCheck .verifyEmail h3{
+  color: #343434;
+  margin: 20px 0;
+}
+.registerEmailCheck .verifyEmail p span{
+  color: #148CCA;
+}
+/*emailCheck结束*/
+
+/*注册资料开始*/
+.buyerCompanyInfo .panel,.buyerPersonalInfo .panel,.supplierPersonalInfo .panel{
+  margin: 50px 0;
+}
+.buyerCompanyInfo .panel-heading,.buyerPersonalInfo .panel-heading,.supplierPersonalInfo .panel-heading{
+  background-color: #fff;
+  padding-left: 100px;
+}
+.buyerCompanyInfo .panel-body,.buyerPersonalInfo .panel-body{
+  padding: 30px 50px;
+}
+.buyerCompanyInfo label,.buyerPersonalInfo label,.supplierCompanyInfo label,.supplierPersonalInfo label{
+  font-weight: 100;
+}
+.buyerCompanyInfo span,.buyerPersonalInfo span,.supplierCompanyInfo span,.supplierPersonalInfo span{
+  color: #f00;
+}
+.buyerCompanyInfo input,.buyerCompanyInfo select,.buyerPersonalInfo input,.buyerPersonalInfo select,.supplierCompanyInfo input,.supplierCompanyInfo select,.supplierPersonalInfo input,.supplierPersonalInfo select{
+  height: 40px;
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.buyerCompanyInfo input:focus,.buyerPersonalInfo input:focus,.supplierCompanyInfo input:focus,.supplierPersonalInfo input:focus{
+  border: 1px solid #148CCA;
+}
+.supplierCompanyInfo input[type=file]{
+  border: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.buyerCompanyInfo p{
+  margin: 0;
+}
+.buyerCompanyInfo label{
+  margin: 0;
+}
+.buyerCompanyInfo .borderNo{
+  padding: 10px 0;
+}
+/*注册资料结束*/
+
+/*search开始*/
+.search h1{
+  font-size: 30px;
+  font-weight: 100;
+}
+.search .searchProduct,.supplierCompanyInfo .panel1{
+  margin-top: 20px;
+}
+.search .searchProduct input{
+  padding-right: 40px;
+}
+.search .searchProduct button{
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+}
+.search .panel-heading,.supplierCompanyInfo .panel-heading{
+  background-color: #fff;
+}
+.search .panel-heading i,.supplierCompanyInfo .panel-heading i{
+  padding-right: 20px;
+}
+.search .panel-heading a,.supplierCompanyInfo .panel-heading a{
+  display: block;
+}
+.search .panel-body label,.supplierCompanyInfo .panel-body label{
+  font-weight: 100;
+  padding-right: 20px;
+  word-break: break-all;
+}
+.search input,.search select{
+  height: 40px;
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.search input:focus,.search input:focus {
+  border: 1px solid #148CCA;
+}
+.search .select{
+  margin: 0 0 10px;
+}
+.search .select span{
+  padding-left: 5px;
+}
+.search table th{
+  font-weight: 500;
+  background-color: #148CCA;
+  color: #fff;
+  width: 16.666666%;
+}
+.search table td{
+  background-color: #fff;
+  font-weight: 100;
+}
+.search table button{
+  border-radius: 0;
+}
+.search .leftButton i,.search .rightButton i{
+  font-size: 70px;
+}
+.search .leftButton a,.search .rightButton a{
+  border: none;
+  color: #666;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.search .leftButton a:hover,.search .leftButton a:focus,.search .rightButton a:hover,.search .rightButton a:focus{
+  color: #333;
+}
+.search .leftButton{
+  position: absolute;
+  top: 40%;
+  left: -50px;
+  display: inline-block;
+}
+.search .rightButton{
+  position: absolute;
+  top: 40%;
+  right: -50px;
+  display: inline-block;
+}
+@media (min-width: 992px){
+  .modal-lg {
+    width: 1200px;
+  }
+}
+
+/*search结束*/
+.supplierCompanyInfo h4{
+  font-size: 14px;
+}
+.supplierCompanyInfo p{
+  margin: 0;
+}
+.supplierDetailedCompanyInfo label{
+  margin: 0;
+}
+.supplierCompanyInfo tr th,.supplierCompanyInfo tr td{
+  font-weight: 100;
+}
+.supplierCompanyInfo .multibox{
+  max-height: 50px;
+  overflow-x: hidden;
+}
+.supplierCompanyInfo button{
+  margin-top: 20px;
+  border-radius: 0;
+}
+.supplierCompanyInfo .borderBottom i{
+  font-size: 30px;
+}
+.supplierCompanyInfo .borderBottom .fa-check{
+  color: #009900;
+}
+.supplierCompanyInfo .borderBottom .fa-question{
+  color: #ff8000;
+}
+.supplierCompanyInfo .borderBottom .fa-times{
+  color: #ff0000;
+}
+.masthead-nav .active a, .masthead-nav .active a:hover, .masthead-nav .active  a:focus {
+    color: #148cca;
+    border-bottom-color: #148cca;
+}
+.masthead-nav li a:hover, .masthead-nav li  a:focus {
+    background-color: transparent;
+    border-bottom-color: #cdcdce;
+    border-bottom-color: #cdcdce;
+}
+.masthead-nav li a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+   /* font-weight: bold;*/
+    color: #b5b5b5;
+  /*  color: rgba(0,0,0,.25);*/
+    border-bottom: 2px solid transparent;
+    position: relative;
+    display: block;
+    padding: 20px ;
+}
+
+.textWarn{
+  border: 1px solid #ea1717;
+}
+
+.ml-45{
+  margin-left: 45px;
+}
+.commit-logo img{
+  width: 160px;
+}
+.personal-photo{
+  margin-left: 40px;
+}
+.personal-photo img{
+  width: 80px;
+}
+.buyProfile.content{
+  background-color: #fff;
+}
+.buyProfile h3{
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+.buyProfile h4{
+  margin: 0 0 30px;
+}
+.buyProfile h5{
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+.buyProfile p{
+  color: #555;
+}
+.table-search th{
+  width: 16.66666%;
+}
+.table-search img{
+  max-width: 100%;
+}

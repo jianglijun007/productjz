@@ -1,0 +1,1316 @@
+<include file = "layout:header"/>
+<include file = "layout:navbar"/>
+  <div class="content supplierCompanyInfo">
+  <div class="container">
+    <form action="__APP__/Home/User/update" method="post" enctype="multipart/form-data">
+      <div class="row">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default panel1">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <i class="fa fa-wrench"></i>基本信息<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-9">
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">姓名</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="name" name="base[name]" value="{$base[name]}" />
+                      </div>
+                    </div><!--姓名-->
+                  
+                    <div class="form-group clearfix">
+                      <label for="sex" class="col-sm-3 control-label">性别</label>
+                      <div class="col-sm-3">
+                        <select id="sex" class="form-control" name="base[sex]">
+                            <option value="{$base[sex]}">{$base[sex]}</option>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
+                      </div>
+                      <label for="nationality" class="col-sm-2 control-label">民族</label>
+                      <div class="col-sm-3">
+                        <select id="nationality" class="form-control" name="base[nationality_id]">
+                            <option value="{$base[nationality_id]}">{$base[nation]}</option>
+                            <foreach name='nation' item='vo'>
+                              <option value="{$vo['id']}">{$vo['name']}</option>
+                            </foreach>
+                        </select>
+                      </div>
+                    </div><!--性别、民族-->
+
+                    <div class="form-group clearfix">
+                      <label for="married" class="col-sm-3 control-label">婚否</label>
+                      <div class="col-sm-3">
+                        <select id="married" class="form-control" name="base[isMarried]">
+                            <option value="{$base[ismarried]}">{$base[ismarried]}</option>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+                      </div>
+                      <label for="birth" class="col-sm-2 control-label">出生日期</label>
+                      <div class="col-sm-3">
+                        <input type="date" class="form-control" id="birth" name="base[birthDate]" value="{$base[birthdate]}"/>
+                      </div>
+                    </div><!--婚姻、出生日期-->
+
+                    <div class="form-group clearfix">
+                      <label for="idCard" class="col-sm-3 control-label">身份证号</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="idCard" name="base[idCard]" value="{$base[idcard]}"/>
+                      </div>
+                    </div><!--身份证-->
+
+                    <div class="form-group clearfix">
+                      <label for="birtharea" class="col-sm-3 control-label">籍贯</label>
+                      <div class="col-sm-2">
+                        <select id="province1" class="form-control" name="base[birthProvince_id]">
+                          <option value="{$base[birthprovince_id]}">{$base[birthprovince]}</option>
+                            <foreach name="province" item="vo">
+                              <option value="{$vo[region_id]}">{$vo[region_name]}</option>
+                            </foreach>
+                        </select>
+                      </div>
+                      <div class="col-sm-3">
+                        <select id="country1" class="form-control" name="base[birthCity_id]">
+                            <option value="{$base[birthcity_id]}">{$base[birthcity]}</option>
+                        </select>
+                      </div><div class="col-sm-3">
+                        <select id="part1" class="form-control" name="base[birthCountry_id]">
+                            <option value="{$base[birthcountry_id]}">{$base[birthcountry]}</option>
+                        </select>
+                      </div>
+                    </div><!--籍贯-->
+
+                    <div class="form-group clearfix">
+                      <label for="birtharea" class="col-sm-3 control-label">出生地</label>
+                      <div class="col-sm-2">
+                        <select id="province2" class="form-control" name="base[userProvince_id]">
+                            <option value="{$base[userprovince_id]}">{$base[userprovince]}</option>
+                            <foreach name="province" item="vo">
+                              <option value="{$vo[region_id]}">{$vo[region_name]}</option>
+                            </foreach>
+                        </select>
+                      </div>
+                      <div class="col-sm-3">
+                        <select id="country2" class="form-control" name="base[userCity_id]">
+                            <option value="{$base[usercity_id]}">{$base[usercity]}</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-3">
+                        <select id="part2" class="form-control" name="base[userCountry_id]">
+                            <option value="{$base[usercountry_id]}">{$base[usercountry]}</option>
+                        </select>
+                      </div>
+                    </div><!--出生地-->
+
+                    <div class="form-group clearfix">
+                      <label for="graduate" class="col-sm-3 control-label">应往届</label>
+                      <div class="col-sm-3">
+                        <select id="graduate" class="form-control" name="base[isGaraduated]">
+                            <option value="{$base[isgaraduated]}">{$base[isgaraduated]}</option>
+                            <option value="应届生">应届生</option>
+                            <option value="往届生">往届生</option>
+                        </select>
+                      </div>
+                      <label for="politicalStatus" class="col-sm-2 control-label">政治面貌</label>
+                      <div class="col-sm-3">
+                        <select id="politicalStatus" class="form-control" name="base[politicalStatus]">
+                            <option value="{$base[politicalstatus]}">{$base[politicalstatus]}</option>
+                            <option value="党员">党员</option>
+                            <option value="团员">团员</option>
+                            <option value="群众">群众</option>
+                        </select>
+                      </div>
+                    </div>
+    
+                    <div class="form-group clearfix">
+                      <label for="graduate" class="col-sm-3 control-label">团或学生干部</label>
+                      <div class="col-sm-3">
+                        <select id="graduate" class="form-control" name="base[isOnceLeader]">
+                            <option value="{$base[isonceleader]}">{$base[isonceleader]}</option>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+                      </div>
+                      <label for="politicalStatus" class="col-sm-2 control-label">入党时间</label>
+                      <div class="col-sm-3">
+                        <input type="month" class="form-control" id="idCard" name="base[PartyDate]" value="{$base[partydate]}" />
+                      </div>
+                    </div>
+
+
+                    <div class="form-group clearfix">
+                      <label class="col-sm-3 control-label">选聘年月</label>
+                      <div class="col-sm-3">
+                        <input type="month" class="form-control" id="idCard" name="base[hiredDate]" value="{$base[hireddate]}"/>
+                      </div>
+                      <label for="politicalStatus" class="col-sm-2 control-label">聘期期限</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" id="idCard" name="base[hiredTime]" value="{$base[hiredtime]}"/>
+                      </div>
+                    </div>
+                
+                    <div class="form-group clearfix">
+                      <label for="graduate" class="col-sm-3 control-label">选聘性质</label>
+                      <div class="col-sm-8">
+                        <select id="graduate" class="form-control" name="base[hiredType]">
+                            <option value="{$base[hiredtype]}">{$base[hiredtype]}</option>
+                            <option value="省集中选聘" default>省集中选聘</option>
+                            <option value="市选聘">市选聘</option>
+                            <option value="县（市、区）选聘">县（市、区）选聘</option>
+                            <option value="其他">其他</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">参加工作时间</label>
+                      <div class="col-sm-8">
+                        <input type="date" class="form-control" id="name" name="base[workDate]" value="{$base[workdate]}"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="birtharea" class="col-sm-3 control-label">任职地区</label>
+                      <div class="col-sm-2">
+                        <select id="province3" class="form-control" name="base[workProvince_id]">
+                            <option value="{$base[workprovince_id]}">{$base[workprovince]}</option>
+                            <foreach name="province" item="vo">
+                              <option value="{$vo[region_id]}">{$vo[region_name]}</option>
+                            </foreach>
+                        </select>
+                      </div>
+                      <div class="col-sm-3">
+                        <select id="country3" class="form-control" name="base[workCity_id]">
+                            <option value="{$base[workcity_id]}">{$base[workcity]}</option>
+                        </select>
+                      </div><div class="col-sm-3">
+                        <select id="part3" class="form-control" name="base[workCountry_id]">
+                            <option value="{$base[workcountry_id]}">{$base[workcountry]}</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">具体单位</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="name" name="base[workUnit]" value="{$base[workunit]}"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">职务</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="name" name="base[function]" value="{$base['function']}"/>
+                      </div>
+                    </div>
+              
+                    <div class="form-group clearfix">
+                      <label for="birtharea" class="col-sm-3 control-label">党代表</label>
+                      <div class="col-sm-2">
+                        <select id="province" class="form-control" name="base[isPartyRp]">
+                            <option value="{$base[ispartyrp]}">{$base[ispartyrp]}</option>
+                            <option value="无">无</option>
+                            <option value="全国">全国</option>
+                            <option value="省级">省级</option>
+                            <option value="市级">市级</option>
+                            <option value="县级">县级</option>
+                            <option value="乡级">乡级</option>
+                        </select>
+                      </div>
+                      <label for="birtharea" class="col-sm-2 control-label">人大代表</label>
+                      <div class="col-sm-2">
+                        <select id="city" class="form-control" name="base[isNPCRp]">
+                            <option value="{$base[isnpcrp]}">{$base[isnpcrp]}</option>
+                            <option value="无">无</option>
+                            <option value="全国">全国</option>
+                            <option value="省级">省级</option>
+                            <option value="市级">市级</option>
+                            <option value="县级">县级</option>
+                            <option value="乡级">乡级</option>
+                        </select>
+                      </div>
+                    </div>
+      
+                    <div class="form-group clearfix">
+                      <label for="birtharea" class="col-sm-3 control-label">政协委员</label>
+                      <div class="col-sm-2">
+                        <select id="country" class="form-control" name="base[isCPPCCmember]">
+                            <option value="{$base[iscppccmember]}">{$base[iscppccmember]}</option>
+                            <option value="无">无</option>
+                            <option value="全国">全国</option>
+                            <option value="省级">省级</option>
+                            <option value="市级">市级</option>
+                            <option value="县级">县级</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">通讯地址</label>
+                      <div class="col-sm-4">
+                        <input type="text" class="form-control" id="name" name="base[address]" value="{$base[address]}" />
+                      </div>
+                      <label for="name" class="col-sm-2 control-label">邮编</label>
+                      <div class="col-sm-2">
+                        <input type="number" class="form-control" id="name" name="base[postcode]" value="{$base[postcode]}"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">移动电话</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" id="name" name="base[mobile]" value="{$base[mobile]}"/>
+                      </div>
+                      <label for="name" class="col-sm-2 control-label">办公电话</label>
+                      <div class="col-sm-3">
+                        <input type="number" class="form-control" id="name" name="base[officephone]" value="{$base[officephone]}"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">电子邮箱</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" id="name" name="base[email]" value="{$base[email]}"/>
+                      </div>
+                      <label for="name" class="col-sm-2 control-label">宽带账号</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" id="name" name="base[modelCount]" value="{$base[modelcount]}"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">专长</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" id="name" name="base[speciality]" value="{$base[speciality]}"/>
+                      </div>
+                      <label for="name" class="col-sm-2 control-label">专业技术职称</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" id="name" name="base[title]" value="{$base[title]}"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">健康状况</label>
+                      <div class="col-sm-3">
+                        <select id="province" class="form-control" name="base[health]">
+                            <option value="{$base[health]}">{$base[health]}</option>
+                            <option value="良好">良好</option>
+                            <option value="一般">一般</option>
+                            <option value="较差">较差</option>
+                        </select>
+                      </div>
+                      <label for="name" class="col-sm-2 control-label">工作状态</label>
+                      <div class="col-sm-3">
+                        <select id="province" class="form-control" name="base[status]">
+                            <option value="{$base[status]}">{$base[status]}</option>
+                            <option value="在乡">在乡</option>
+                            <option value="流出">流出</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">离岗时间</label>
+                      <div class="col-sm-3">
+                        <input type="date" class="form-control" id="name" name="base[quitDate]" value="{$base[quitdate]}"/>
+                      </div>
+                      <label for="name" class="col-sm-2 control-label">是否服务期未满离岗</label>
+                      <div class="col-sm-3">
+                        <select id="province" class="form-control" name="base[isQuitUnexpected]">
+                            <option value="{$base[isquitunexpected]}">{$base[isquitunexpected]}</option>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group clearfix">
+                      <label for="name" class="col-sm-3 control-label">离岗原因</label>
+                      <div class="col-sm-8">
+                        <select id="province" class="form-control" name="base[quitReason]">
+                            <option value="{$base[quitreason]}">{$base[quitreason]}</option>
+                            <option value="留村任职">留村任职</option>
+                            <option value="进入公务员队伍-选任为乡科级领导干部">进入公务员队伍-选任为乡科级领导干部</option>
+                            <option value="进入公务员队伍-参加定向考录">进入公务员队伍-参加定向考录</option>
+                            <option value="进入公务员队伍-参加社会考录">进入公务员队伍-参加社会考录</option>
+                            <option value="进入公务员队伍-选调生">进入公务员队伍-选调生</option>
+                            <option value="期满离岗自主创业">期满离岗自主创业</option>
+                            <option value="另行择业-通过社会招聘进入事业单位">另行择业-通过社会招聘进入事业单位</option>
+                            <option value="另行择业-进入国有企业或金融机构">另行择业-进入国有企业或金融机构</option>
+                            <option value="另行择业-进入非公企业、社会组织等单位">另行择业-进入非公企业、社会组织等单位</option>
+                            <option value="另行择业-定向招录为事业单位人员">另行择业-定向招录为事业单位人员</option>
+                            <option value="考取研究生-参加定向招考">考取研究生-参加定向招考</option>
+                            <option value="考取研究生-其他方式">考取研究生-其他方式</option>
+                            <option value="考核不合格被解聘">考核不合格被解聘</option>
+                            <option value="其他">其他</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel2">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <i class="fa fa-user"></i>教育信息<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-9">
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">教育类别</label>
+                        <div class="col-sm-8">
+                          <select id="province" class="form-control" name="edu[type]">
+                              <option value="{$edu[type]}">{$edu[type]}</option>
+                              <option value="全日制">全日制</option>
+                              <option value="在职">在职</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">学历名称</label>
+                        <div class="col-sm-8">
+                          <select id="province" class="form-control" name="edu[eduName]">
+                              <option value="{$edu[eduname]}">{$edu[eduname]}</option>
+                              <option value="专科">专科</option>
+                              <option value="本科">本科</option>
+                              <option value="硕士研究生">硕士研究生</option>
+                              <option value="博士研究生">博士研究生</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">毕业院校名称</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="name" name="edu[school]" value="{$edu[school]}" />
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">所学专业名称</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="name" name="edu[major]" value="{$edu[major]}" />
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">所学专业类别</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="name" name="edu[majorType]" value="{$edu[majortype]}" />
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">毕（肄）业时间</label>
+                        <div class="col-sm-8">
+                          <input type="date" class="form-control" id="name" name="edu[graTime]" value="{$edu[gratime]}" />
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel3">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <i class="fa fa-check"></i>简历信息<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-9">
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">起始时间</label>
+                        <div class="col-sm-8">
+                          <input type="date" class="form-control" id="name" name="exp[beginTime]" value="{$exp[begintime]}" />
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">终止时间</label>
+                        <div class="col-sm-8">
+                          <input type="date" class="form-control" id="name" name="exp[endTime]" value="{$exp[endtime]}" />
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">简历描述</label>
+                        <div class="col-sm-8">
+                          <textarea class="form-control" rows="20" type="textarea" class="form-control" id="name" name="exp[describe]" placeholder="（1）简历信息应包含大专以上全部学习经历和工作经历
+                          （2）学习经历应包含学校、院系、专业的具体名称
+                         （3）工作经历应包含所在地区、具体单位、具体职务
+                         （4）每一次任职地及职务变动都应填写
+                         （5）轮岗锻炼两个月以上应填写
+                        （6）简历时间前后应衔接起来
+                        （7）现任职务只填起始时间，不填终止时间
+                          " value="{$exp[describe]}" ></textarea>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel4">
+            <div class="panel-heading" role="tab" id="headingFour">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                  <i class="fa fa-globe"></i>考核情况<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-9">
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">考核年份</label>
+                        <div class="col-sm-8">
+                          <input type="year" class="form-control" id="name" name="state[year]" value="{$state[year]}" />
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">考核类型</label>
+                        <div class="col-sm-8">
+                          <select id="province" class="form-control" name="state[type]">
+                              <option value="{$state[type]}">{$state[type]}</option>
+                              <option value="年度考核">年度考核</option>
+                              <option value="聘期考核">聘期考核</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">考核结论</label>
+                        <div class="col-sm-8">
+                          <select id="province" class="form-control" name="state[result]">
+                              <option value="{$state[result]}">{$state[result]}</option>
+                              <option value="优秀">优秀</option>
+                              <option value="称职">称职</option>
+                              <option value="基本称职">基本称职</option>
+                              <option value="不称职">不称职</option>
+                              <option value="不定等次">不定等次</option>
+                              <option value="新录用公务员试用期年度考核不确定等次">新录用公务员试用期年度考核不确定等次</option>
+                              <option value="被立案调查尚未结案年度考核不确定等次">被立案调查尚未结案年度考核不确定等次</option>
+                              <option value="受政纪处分期间年度考核不确定等次">受政纪处分期间年度考核不确定等次</option>
+                              <option value="不进行考核、病、事假累计超过考核年度半年不进行考核">不进行考核、病、事假累计超过考核年度半年不进行考核</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">考核得分</label>
+                        <div class="col-sm-8">
+                          <input type="number" class="form-control" id="name" name="state[score]" value="{$state[score]}" />
+                        </div>
+                      </div>
+
+                    </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel5">
+            <div class="panel-heading" role="tab" id="headingFive">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <i class="fa fa-globe"></i>奖惩情况<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">奖惩名称</label>
+                        <div class="col-sm-8">
+                          <input type="input" class="form-control" id="name" name="rp[name]" value="{$rp[name]}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">奖惩等级</label>
+                        <div class="col-sm-8">
+                          <select id="province" class="form-control" name="rp[level]">
+                              <option value="{$rp[level]}">{$rp[level]}</option>
+                              <option value="国家级">国家级</option>
+                              <option value="省级">省级</option>
+                              <option value="市级">市级</option>
+                              <option value="县级">县级</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">批准单位</label>
+                        <div class="col-sm-8">
+                          <input type="input" class="form-control" id="name" name="rp[unit]" value="{$rp[unit]}"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-3 control-label">奖惩时间</label>
+                        <div class="col-sm-8">
+                          <input type="date" class="form-control" id="name" name="rp[time]" value="{$rp[time]}"/>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel6">
+            <div class="panel-heading" role="tab" id="headingSix">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <i class="fa fa-globe"></i>待遇保障<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">起薪时间</label>
+                        <div class="col-sm-8">
+                          <input type="date" class="form-control" id="name" name="treat[moneyTime]" value="{$treat[moneytime]}"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">工作生活补贴</label>
+                        <div class="col-sm-8">
+                          <input type="number" class="form-control" id="name" name="treat[lifeBonus]" value="{$treat[lifebonus]}"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">津补贴</label>
+                        <div class="col-sm-8">
+                          <input type="number" class="form-control" id="name" name="treat[jinBonus]" value="{$treat[jinbonus]}"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">奖金</label>
+                        <div class="col-sm-8">
+                          <input type="number" class="form-control" id="name" name="treat[Bonus]" value="{$treat[bonus]}"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">养老保险</label>
+                        <div class="col-sm-2">
+                          <select id="province" class="form-control" name="treat[old_insurance]">
+                              <option value="{$treat[old_insurance]}">{$treat[old_insurance]}</option>
+                              <option value="有">有</option>
+                              <option value="无">无</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">医疗保险</label>
+                        <div class="col-sm-2">
+                          <select id="city" class="form-control" name="treat[ill_insurance]">
+                              <option value="{$treat[ill_insurance]}">{$treat[ill_insurance]}</option>
+                              <option value="有">有</option>
+                              <option value="无">无</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">工伤保险</label>
+                        <div class="col-sm-2">
+                          <select id="country" class="form-control" name="treat[injury_insurance]">
+                              <option value="{$treat[injury_insurance]}">{$treat[injury_insurance]}</option>
+                              <option value="有">有</option>
+                              <option value="无">无</option>
+                          </select>
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">失业保险</label>
+                        <div class="col-sm-2">
+                          <select id="province" class="form-control" name="treat[lose_insurance]">
+                              <option value="{$treat[lose_insurance]}">{$treat[lose_insurance]}</option>
+                              <option value="有">有</option>
+                              <option value="无">无</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">生育保险</label>
+                        <div class="col-sm-2">
+                          <select id="city" class="form-control" name="treat[birth_insurance]">
+                              <option value="{$treat[birth_insurance]}">{$treat[birth_insurance]}</option>
+                              <option value="有">有</option>
+                              <option value="无">无</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">公积金</label>
+                        <div class="col-sm-2">
+                          <select id="country" class="form-control" name="treat[providentFund]">
+                              <option value="{$treat[providentfund]}">{$treat[providentfund]}</option>
+                              <option value="有">有</option>
+                              <option value="无">无</option>
+                          </select>
+                        </div>
+                     </div>
+
+                      <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">学费补偿与助学贷款代偿</label>
+                        <div class="col-sm-2">
+                          <select id="city" class="form-control" name="treat[schoolarAss]">
+                              <option value="{$treat[schoolarass]}">{$base[schoolarass]}</option>
+                              <option value="有">有</option>
+                              <option value="无">无</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">重大疾病和意外伤害保险</label>
+                        <div class="col-sm-2">
+                          <select id="country" class="form-control" name="treat[heavyIllness]">
+                              <option value="{$treat[heavyillness]}">{$treat[heavyillness]}</option>
+                              <option value="有">有</option>
+                              <option value="无">无</option>
+                          </select>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel7">
+            <div class="panel-heading" role="tab" id="headingSeven">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  <i class="fa fa-globe"></i>创业情况<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">创业起始时间</label>
+                        <div class="col-sm-3">
+                          <input type="date" class="form-control" id="name" name="bus[beginTime]" value="{$bus[begintime]}" />
+                        </div>
+                        <label for="name" class="col-sm-2 control-label">参与方式</label>
+                        <div class="col-sm-3">
+                          <select id="bus" class="form-control" name="bus[joinType]">
+                              <option value="{$bus[jointype]}">{$bus[jointype]}</option>
+                              <option value="独资">独资</option>
+                              <option value="合办">合办</option>
+                          </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">项目名称</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="name" name="bus[name]" value="{$bus[name]}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">是否专业合作社</label>
+                        <div class="col-sm-2">
+                          <select id="province" class="form-control" name="bus[isCooperation]">
+                              <option value="{$bus[iscooperation]}">{$bus[iscooperation]}</option>
+                              <option value="是">是</option>
+                              <option value="否">否</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">股份制经营或合伙经营</label>
+                        <div class="col-sm-2">
+                          <select id="city" class="form-control" name="bus[businessType]">
+                              <option value="{$bus[businesstype]}">{$bus[businesstype]}</option>
+                              <option value="股份制经营">股份制经营</option>
+                              <option value="合伙经营">合伙经营</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">领办或合伙经营</label>
+                        <div class="col-sm-2">
+                          <select id="country" class="form-control" name="bus[personType]">
+                              <option value="{$bus[persontype]}">{$bus[persontype]}</option>
+                              <option value="领办">领办</option>
+                              <option value="合伙经营">合伙经营</option>
+                          </select>
+                        </div>
+                     </div>
+
+                      <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">运营状态</label>
+                        <div class="col-sm-2">
+                          <select id="province" class="form-control" name="bus[status]">
+                              <option value="{$bus[status]}">{$bus[status]}</option>
+                              <option value="正在运营">正在运营</option>
+                              <option value="尚未运营、转让或停止">尚未运营、转让或停止</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">项目规模</label>
+                        <div class="col-sm-2">
+                          <select id="city" class="form-control" name="bus[scale]">
+                              <option value="{$bus[scale]}">{$bus[scale]}</option>
+                              <option value="10万元以下">10万元以下</option>
+                              <option value="10-50万元">10-50万元</option>
+                              <option value="50-100万元">50-100万元</option>
+                              <option value="100万元以上">100万元以上</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">产业领域</label>
+                        <div class="col-sm-2">
+                          <input type="text" class="form-control" id="name" name="bus[field]" value="{$bus[field]}" />
+                        </div>
+                     </div>
+
+                      <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">为农名群众提供就业岗位（人）</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="name" name="bus[numOfpost]" value="{$bus[numofpost]}" />
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">带动致富人数（人）</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="name" name="bus[enrichPeople]" value="{$bus[enrichpeople]}" />
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">平均年收入（元）</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="name" name="bus[annualIncome]" value="{$bus[annualincome]}" />
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">创业资金来源</label>
+                        <div class="col-sm-3">
+                          <select id="city" class="form-control" name="bus[moneySource]">
+                              <option value="{$bus[moneysource]}">{$bus[moneysource]}</option>
+                              <option value="自筹">自筹</option>
+                              <option value="银行贷款">银行贷款</option>
+                              <option value="财政/社会资源支持">财政/社会资源支持</option>
+                              <option value="其他">其他</option>
+                          </select>
+                        </div>
+                     </div>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel8">
+            <div class="panel-heading" role="tab" id="headingEight">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  <i class="fa fa-globe"></i>培训情况<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">开始时间</label>
+                        <div class="col-sm-3">
+                          <select id="province" class="form-control" name="base[birthProvince_id]">
+                              <input type="date" class="form-control" id="name" name="train[beginTime]" value="{$train[begintime]}" />
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">结束时间</label>
+                        <div class="col-sm-3">
+                          <input type="date" class="form-control" id="name" name="train[endTime]" value="{$train[endtime]}"/>
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">培训成绩</label>
+                        <div class="col-sm-3">
+                          <select id="province" class="form-control" name="train[result]">
+                              <option value="{$train[result]}">{$train[result]}</option>
+                              <option value="无">无</option>
+                              <option value="优">优</option>
+                              <option value="良">良</option>
+                              <option value="中">中</option>
+                              <option value="差">差</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">培训级别</label>
+                        <div class="col-sm-3">
+                          <select id="city" class="form-control" name="train[level]">
+                              <option value="{$train[level]}">{$train[level]}</option>
+                              <option value="国家级">国家级</option>
+                              <option value="省级">省级</option>
+                              <option value="市级">市级</option>
+                              <option value="县区级">县区级</option>
+                          </select>
+                        </div>
+                     </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">培训名称</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="name" name="train[name]" value="{$train[name]}"/>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel9">
+            <div class="panel-heading" role="tab" id="headingNine">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  <i class="fa fa-globe"></i>帮带情况<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">帮带干部名字</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="name" name="helper[name]" value="{$helper[name]}"/>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">帮带干部职务</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="name" name="helper[title]" value="{$helper[title]}"/>
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">帮带干部级别</label>
+                        <div class="col-sm-3">
+                          <select id="province" class="form-control" name="helper[level]">
+                              <option value="{$helper[level]}">{$helper[level]}</option>
+                              <option value="县处级">县处级</option>
+                              <option value="乡科级">乡科级</option>
+                              <option value="村级">村级</option>
+                              <option value="厅级">厅级</option>
+                              <option value="省部级">省部级</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">联系方式</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="name" name="helper[mobile]" value="{$helper[mobile]}"/>
+                        </div>
+                     </div>
+
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel10">
+            <div class="panel-heading" role="tab" id="headingTen">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  <i class="fa fa-globe"></i>社会关系<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">关系人姓名</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="name" name="social[name]" value="{$social[name]}"/>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">出生年月</label>
+                        <div class="col-sm-3">
+                          <input type="date" class="form-control" id="name" name="social[birth]" value="{$social[birth]}"/>
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">关系类别</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="name" name="social[type]" value="{$social[type]}"/>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">政治面貌</label>
+                        <div class="col-sm-3">
+                          <select id="city" class="form-control" name="social[polity]">
+                            <option value="{$social[polity]}">{$social[polity]}</option>
+                            <option value="党员">党员</option>
+                            <option value="团员">团员</option>
+                            <option value="群众">群众</option>
+                          </select>
+                        </div>
+                     </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">工作单位</label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="name" name="social[unit]" value="{$social[unit]}"/>
+                        </div>
+                        <label for="name" class="col-sm-1 control-label">职务</label>
+                        <div class="col-sm-2">
+                          <input type="text" class="form-control" id="name" name="social[title]" value="{$social[title]}"/>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel11">
+            <div class="panel-heading" role="tab" id="headingEleven">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                  <i class="fa fa-globe"></i>合同信息<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">合同开始时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="bargain[begin]" value="{$bargain[begin]}"/>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">合同结束时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="bargain[end]" value="{$bargain[end]}"/>
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">合同性质</label>
+                        <div class="col-sm-3">
+                          <select id="province" class="form-control" name="bargain[type]">
+                              <option value="{$bargain[type]}">{$bargain[type]}</option>
+                              <option value="村官任职">村官任职</option>
+                              <option value="其它">其它</option>
+                          </select>
+                        </div>
+                     </div>
+
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel12">
+            <div class="panel-heading" role="tab" id="headingTwelve">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                  <i class="fa fa-globe"></i>村级职务<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">任职开始时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="country[begin]" value="{$country[begin]}"/>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">任职结束时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="country[end]" value="{$country[end]}"/>
+                        </div>
+                     </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">任职村</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="name" name="country[area]" value="{$country[area]}"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">职务</label>
+                        <div class="col-sm-8">
+                          <select id="province" class="form-control" name="country[title]">
+                             <option value="{$country[title]}">{$country[title]}</option>
+                              <option value="村党组织书记">村党组织书记</option>
+                              <option value="村委会主任">村委会主任</option>
+                              <option value="村党组织副书记">村党组织副书记</option>
+                              <option value="村委会副主任">村委会副主任</option>
+                              <option value="村两委委员">村两委委员</option>
+                              <option value="村党组织书记助理">村党组织书记助理</option>
+                              <option value="村委会主任助理">村委会主任助理</option>
+                              <option value="第一书记">第一书记</option>
+                              <option value="村团委书记">村团委书记</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">兼职</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="name" name="country[parttime]" />
+                        </div>
+                      </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">是否建档立卡贫困村</label>
+                        <div class="col-sm-3">
+                          <select id="province" class="form-control" name="country[isEstablished]">
+                              <option value="{$country[isestablished]}">{$country[isestablished]}</option>
+                              <option value="是">是</option>
+                              <option value="否">否</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">是否两委正职一肩挑</label>
+                        <div class="col-sm-3">
+                          <select id="city" class="form-control" name="country[isLWYZ]">
+                              <option value="{$country[islwyz]}">{$country[islwyz]}</option>
+                              <option value="是">是</option>
+                              <option value="否">否</option>
+                          </select>
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">任职方式</label>
+                        <div class="col-sm-8">
+                          <select id="province" class="form-control" name="country[type]">
+                              <option value="{$country[type]}">{$country[type]}</option>
+                              <option value="直接任命">直接任命</option>
+                              <option value="公开选拔">公开选拔</option>
+                              <option value="换届选举">换届选举</option>
+                          </select>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel13">
+            <div class="panel-heading" role="tab" id="headingThirteen">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                  <i class="fa fa-globe"></i>乡科级干部<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">任职开始时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="town[begin]" value="{$town[begin]}"/>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">任职结束时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="town[end]" value="{$town[end]}"/>
+                        </div>
+                     </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">任职单位</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="name" name="town[area]" value="{$town[area]}"/>
+                        </div>
+                      </div>
+
+                      <div class="form-group clearfix">
+                        <label for="name" class="col-sm-2 control-label">职务</label>
+                        <div class="col-sm-8">
+                          <select id="province" class="form-control" name="town[title]">
+                              <option value="{$town[title]}">{$town[title]}</option>
+                              <option value="乡镇（街道）党（工）委书记">乡镇（街道）党（工）委书记</option>
+                              <option value="乡镇（街道）长（主任）">乡镇（街道）长（主任）</option>
+                              <option value="乡镇（街道）党（工）委副书记">乡镇（街道）党（工）委副书记</option>
+                              <option value="副乡镇（街道）长（主任）">副乡镇（街道）长（主任）</option>
+                              <option value="乡镇（街道）党（工）委委员">乡镇（街道）党（工）委委员</option>
+                              <option value="县直部门正职">县直部门正职</option>
+                              <option value="县直部门副职">县直部门副职</option>
+                              <option value="其他乡科级正职">其他乡科级正职</option>
+                              <option value="其他乡科级副职">其他乡科级副职</option>
+                          </select>
+                        </div>
+                      </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">职务层次</label>
+                        <div class="col-sm-3">
+                          <select id="province" class="form-control" name="town[level]">
+                              <option value="{$town[level]}">{$town[level]}</option>
+                              <option value="科级">科级</option>
+                              <option value="处级">处级</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">任职方式</label>
+                        <div class="col-sm-3">
+                          <select id="city" class="form-control" name="town[type]">
+                              <option value="{$town[type]}">{$town[type]}</option>
+                              <option value="直接任命">直接任命</option>
+                              <option value="公开选拔">公开选拔</option>
+                              <option value="换届选举">换届选举</option>
+                          </select>
+                        </div>
+                     </div>
+
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel14">
+            <div class="panel-heading" role="tab" id="headingFourteen">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                  <i class="fa fa-globe"></i>后备干部<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">任职开始时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="backup[begin]" value="{$backup[begin]}"/>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">任职结束时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="backup[end]"  value="{$backup[end]}"/>
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">职务层次</label>
+                        <div class="col-sm-3">
+                          <select id="city" class="form-control" name="backup[level]">
+                              <option value="{$backup[level]}">{$backup[level]}</option>
+                              <option value="科级">科级</option>
+                              <option value="处级">处级</option>
+                          </select>
+                        </div>
+                     </div>
+
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default panel15">
+            <div class="panel-heading" role="tab" id="headingFifteen">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                  <i class="fa fa-globe"></i>两代一委员<i class="fa fa-angle-down pull-right"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFifteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">任职开始时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="cmc[begin]"  value="{$cmc[begin]}"/>
+                        </div>
+
+                        <label for="birtharea" class="col-sm-2 control-label">任职结束时间</label>
+                        <div class="col-sm-3">
+                          <input type="month" class="form-control" id="name" name="cmc[end]"  value="{$cmc[end]}"/>
+                        </div>
+                     </div>
+
+                     <div class="form-group clearfix">
+                        <label for="birtharea" class="col-sm-2 control-label">级别</label>
+                        <div class="col-sm-3">
+                          <select id="province" class="form-control" name="cmc[level]">
+                              <option value="{$cmc[level]}">{$cmc[level]}</option>
+                              <option value="国家级">国家级</option>
+                              <option value="省级">省级</option>
+                              <option value="市级">市级</option>
+                              <option value="县级">县级</option>
+                          </select>
+                        </div>
+                        <label for="birtharea" class="col-sm-2 control-label">身份</label>
+                        <div class="col-sm-3">
+                          <select id="city" class="form-control" name="cmc[title]">
+                              <option value="{$cmc[title]}">{$cmc[title]}</option>
+                              <option value="党代表">党代表</option>
+                              <option value="人大代表">人大代表</option>
+                              <option value="政协委员">政协委员</option>
+                          </select>
+                        </div>
+                     </div>
+
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+          <input type="hidden" name='user_id'  value="{$id}"/>
+          <input type="submit" class="btn btn-primary btn-block" id="submit" value="更新信息"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<include file = "layout:footer"/>

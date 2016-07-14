@@ -1,0 +1,197 @@
+<include file = "Common:header"/>
+
+
+    <div id="wrapper">
+
+        <include file = "Common:navbar"/>
+
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">联系信息管理</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+                        <div class="panel-body">
+                            <div class="row">
+                                <div>
+                                    <form action="__APP__/Admin/Article/modify_connect/type/connect1" enctype="multipart/form-data"method="post">
+            <div class='row-fluid'>
+              <div class='span12 box' style="margin-left: 0">
+                <div class='box-header'>
+                  <div class='title'>
+                    connect1
+                  </div>
+                  <div class='actions'>
+                    <a href="#" class="btn box-collapse btn-mini btn-link"><i></i></a>
+                  </div>
+                </div>
+                <div class='box-content'>
+                  <div class="span6">
+                    <div class="connect">
+                      <img src="__PUBLIC__/uploads/connect/{$result[0]['url']}" alt="connect1"/>
+                    </div>
+                    <hr class="hr-normal"/>
+                    <input type='file' class="btn btn-primary pull-right btn-small" value='更换' name='connect_1_img'/>
+                  </div>
+                  <div class="span6">
+                  <div class="row-fluid">
+                      <div class="span12">
+                        <span>建议上传图片的比例为750x460,以达到最好的展示效果</span>
+                      </div>
+                  </div>
+                    <div class="row-fluid">
+                      <div class="span2">
+                        <span>标题：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="title" id="connect_1_title" cols="30" rows="2">{$result[0].title}</textarea>
+                      </div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span2">
+                        <span>副标题：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="subtitle" id="connect_1_subtitle" cols="30" rows="2">{$result[0].subtitle}</textarea>
+                      </div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span2">
+                        <span>说明：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="describe" id="connect_1_describe" cols="30" rows="2">{$result[0].describe}</textarea>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary pull-right" style="margin-right: 20px;">提交</button>
+            </form>
+            <form action="__APP__/Admin/Article/modify_connect/type/connect2" enctype="multipart/form-data"method="post">
+              <div class='span12 box' style="margin-left: 0">
+                <div class='box-header'>
+                  <div class='title'>
+                    connect2
+                  </div>
+                  <div class='actions'>
+                    <a href="#" class="btn box-collapse btn-mini btn-link"><i></i></a>
+                  </div>
+                </div>
+                <div class='box-content'>
+                  <div class="span6">
+                    <div class="connect">
+                      <img src="__PUBLIC__/uploads/connect/{$result[1]['url']}" alt="connect1"/>
+                    </div>
+                    <hr class="hr-normal"/>
+                     <input type='file' class="btn btn-primary pull-right btn-small" value='更换' name='connect_2_img'/>
+                  </div>
+                  <div class="span6">
+                  <div class="row-fluid">
+                      <div class="span12">
+                        <span>建议上传图片的比例为750x460,以达到最好的展示效果</span>
+                      </div>
+                  </div>
+                   <div class="row-fluid">
+                      <div class="span2">
+                        <span>标题：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="title" id="connect_2_title" cols="30" rows="2">{$result[1].title}</textarea>
+                      </div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span2">
+                        <span>副标题：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="subtitle" id="connect_2_subtitle" cols="30" rows="2">{$result[1].subtitle}</textarea>
+                      </div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span2">
+                        <span>说明：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="describe" id="connect_2_describe" cols="30" rows="2">{$result[1].describe}</textarea>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary pull-right" style="margin-right: 20px;">提交</button>
+            </form>
+            <form action="__APP__/Admin/Article/modify_connect/type/connect3" enctype="multipart/form-data"method="post">
+              <div class='span12 box' style="margin-left: 0">
+                <div class='box-header'>
+                  <div class='title'>
+                    connect3
+                  </div>
+                  <div class='actions'>
+                    <a href="#" class="btn box-collapse btn-mini btn-link"><i></i></a>
+                  </div>
+                </div>
+                <div class='box-content'>
+                  <div class="span6">
+                    <div class="connect">
+                      <img src="__PUBLIC__/uploads/connect/{$result[2]['url']}" alt="connect1"/>
+                    </div>
+                    <hr class="hr-normal"/>
+                     <input type='file' class="btn btn-primary pull-right btn-small" value='更换' name='connect_3_img'/>
+                  </div>
+                  <div class="span6">
+                  <div class="row-fluid">
+                      <div class="span12">
+                        <span>建议上传图片的比例为750x460,以达到最好的展示效果</span>
+                      </div>
+                  </div>
+                     <div class="row-fluid">
+                      <div class="span2">
+                        <span>标题：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="title" id="connect_3_title" cols="30" rows="2">{$result[2].title}</textarea>
+                      </div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span2">
+                        <span>副标题：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="subtitle" id="connect_3_subtitle" cols="30" rows="2">{$result[2].subtitle}</textarea>
+                      </div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span2">
+                        <span>说明：</span>
+                      </div>
+                      <div class="span10">
+                        <textarea name="describe" id="connect_3_describe" cols="30" rows="2">{$result[2].describe}</textarea>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary pull-right" style="margin-right: 20px;">提交</button>
+            </form>
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-8">
+                                    <div id="morris-bar-chart"></div>
+                                </div>
+                                <!-- /.col-lg-8 (nested) -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.panel-body -->
+            
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    </div>
+    <!-- /#wrapper -->
+
+<include file = "Common:footer"/>

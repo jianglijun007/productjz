@@ -1,0 +1,21 @@
+*{
+	font-family: "微软雅黑";
+}
+
+.navbar-wrapper{
+	margin-top: 20px;
+	z-index: 20;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.description{
+	text-align: center;
+	margin: 30px 0;
+}
+
+.detail{
+	margin: 30px 0;
+}
